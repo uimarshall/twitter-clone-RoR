@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar-brand {
+  color: white;
+}
+
+//  rounded images
+.image {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+}
