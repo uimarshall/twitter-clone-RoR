@@ -50,6 +50,7 @@ group :development do
 
   gem 'gravatar_image_tag', '~> 1.2'
   gem 'devise', '~> 4.7', '>= 4.7.2'
+  gem 'wdm', '~> 0.1.1'
 end
 
 group :test do
