@@ -1,0 +1,24 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Profile
+  </div>
+  <div><%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><Strong><%= current_user.name%></Strong></li>
+    <li class="list-group-item"><small><%= "@" + current_user.username%></small></li>
+  </ul>
+  <div class="card-footer">
+    <span class="card-header">
+      <h2>Tweets</h2>
+      <p><Strong><%= current_user.tweets.count %></Strong></p>
+    </span>
+    <span>
+      <h2>Following</h2>
+      <p>145</p>
+    </span>
+    <span class="card-footer">
+      <h2>Followers</h2>
+      <p>176K</p>
+    </span>
+  </div>
+</div>

@@ -1,12 +1,13 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]#only index & show page do not req authentication
 
   # GET /tweets
   # GET /tweets.json
   def index
     @tweets = Tweet.all.order("created_at DESC")
     @tweet = Tweet.new
+   
   end
 
   # GET /tweets/1

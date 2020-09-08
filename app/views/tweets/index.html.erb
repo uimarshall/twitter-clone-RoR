@@ -1,8 +1,18 @@
 <p id="notice"><%= notice %></p>
-<section class="section">
-  <div class="container">
-    <%= render 'trends' %>
+<div class="row">
+  <% if user_signed_in? %>
+    <div class="col-md-3">
+      <%= render 'profile' %>
+    </div>
+  <% else %>
+    <div class="col-md-3">
+      <%= render 'trends' %>
+    </div>
+  <% end %>
+  <div class="col-md-5">
     <%= render 'feed' %>
+  </div>
+  <div class="col-md-4">
     <%= render 'who-to-follow' %>
   </div>
-</section>
+</div>
